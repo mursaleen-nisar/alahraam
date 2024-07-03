@@ -1,0 +1,29 @@
+<%- include('partials/header') %>
+
+    <main class="bg-stone-100 flex items-center justify-center h-screen pt-10">
+        <div class="w-full max-w-2xl bg-white p-8 rounded-lg shadow-lg">
+            <h1 class="text-3xl font-bold text-gray-900 text-center mb-8">Admin Panel</h1>
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Add Testimonial</h2>
+            <form action="/admin/add-testimonial" method="POST" enctype="multipart/form-data">
+                <div class="mb-4">
+                    <label for="client-name" class="block text-gray-700 text-sm font-bold mb-2">Client Name</label>
+                    <input type="text" id="client-name" name="client_name" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-indigo-500" placeholder="Enter client name">
+                </div>
+                <div class="mb-4">
+                    <label for="client-testimonial" class="block text-gray-700 text-sm font-bold mb-2">Client Testimonial</label>
+                    <textarea id="client-testimonial" name="client_testimonial" required class="shadow appearance-none border rounded w-full h-32 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-indigo-500 resize-none" placeholder="Enter client testimonial"></textarea>
+                </div>
+                <div class="mb-6">
+                    <label for="client-image" class="block text-gray-700 text-sm font-bold mb-2">Upload Image</label>
+                    <input type="file" id="client-image" name="client_image" accept="image/*" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-indigo-500">
+                </div>
+                <div class="flex items-center justify-between">
+                    <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                        Add
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+<%- include('partials/footer') %>
